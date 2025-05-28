@@ -1,0 +1,8 @@
+def contador(*núm):  
+    """Exibe os números recebidos e a quantidade total."""  
+    tam = len(núm)  
+    print(f'Recebi os valores {núm} e são ao todo {tam} números ')  
+
+# Programa Principal
+contador(2, 1, 7)  
+contador(8, 0)  
