@@ -1,0 +1,41 @@
+from time import sleep  
+
+def contador(i, f, p):  
+    """Exibe uma contagem personalizada."""
+    print('-=' * 30)  
+    print(f'Contagem de {i} até {f} de {p} em {p}: ')  
+
+    # Ajusta valores inválidos para o passo
+    if p == 0:  
+        p = 1  
+    if p < 0:  
+        p *= -1  
+
+    # Realiza a contagem progressiva
+    if i < f:  
+        cont = i  
+        while cont <= f:  
+            print(f'{cont}', end=' ')  
+            cont += p  
+            sleep(0.5)  
+        print('FIM!')  
+    else:  
+        # Realiza a contagem regressiva
+        cont = i  
+        while cont >= f:  
+            print(f'{cont}', end=' ')  
+            cont -= p  
+            sleep(0.5)  
+        print('FIM!')  
+        print('-=' * 30)  
+
+# Programa Principal
+contador(1, 10, 1)  
+contador(10, 0, 2)  
+
+# Entrada personalizada do usuário
+print('Agora é sua vez de personalizar a contagem!')  
+i = int(input('Início: '))  
+f = int(input('Fim: '))  
+p = int(input('Passo: '))  
+contador(i, f, p)  
