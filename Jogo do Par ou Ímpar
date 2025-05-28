@@ -1,0 +1,38 @@
+from random import randint  # Importa randint para gerar números aleatórios
+
+print('=-' * 15)
+print('VAMOS JOGAR PAR OU ÍMPAR')
+print('=-' * 15)
+
+v = 0  # Contador de vitórias
+
+while True:
+    jogador = int(input('Diga um valor: '))  # Usuário escolhe um número
+    tipo = str(input('Par ou Ímpar? [P/I] ')).strip().upper()  # Escolhe entre "Par" ou "Ímpar"
+
+    comp = randint(0, 10)  # Computador escolhe um número aleatório
+    total = jogador + comp  # Soma dos valores do jogador e do computador
+
+    print('-' * 31)
+    print(f'Você jogou {jogador} e o computador {comp}. Total de {total}.')
+    print('-' * 31)
+
+    # Verifica se o total é par ou ímpar
+    if total % 2 == 0:
+        print('DEU PAR')
+        if tipo == 'P':
+            print('Você VENCEU!')
+            v += 1  # Incrementa número de vitórias
+        else:
+            print('Você PERDEU!')
+            break  
+    else:
+        print('DEU ÍMPAR')
+        if tipo == 'I':
+            print('Você VENCEU!')
+            v += 1  # Incrementa número de vitórias
+        else:
+            print('Você PERDEU!')
+            break  
+
+print(f'GAME OVER! Você venceu {v} vezes.')  # Exibe o total de vitórias antes de perder
