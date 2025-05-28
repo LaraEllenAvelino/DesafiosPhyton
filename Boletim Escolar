@@ -1,0 +1,21 @@
+boletim = {}  # Cria um dicionário para armazenar os dados do aluno
+
+boletim['nome'] = str(input('Nome: '))  # Solicita o nome do aluno
+boletim['média'] = float(input(f'Média de {boletim["nome"]}: '))  # Solicita a média do aluno
+
+print(f'Nome é igual a {boletim["nome"]}')  
+print(f'Média é igual a {boletim["média"]}')  
+
+# Define a situação do aluno com base na média
+if boletim['média'] >= 7:
+    boletim['situação'] = 'Aprovado'
+elif 5 <= boletim['média'] < 7:
+    boletim['situação'] = 'Recuperação'
+else:
+    boletim['situação'] = 'Reprovado'
+
+print('=-' * 30)
+
+# Exibe os dados do aluno armazenados no dicionário
+for k, v in boletim.items():
+    print(f'{k} é igual a {v}')
