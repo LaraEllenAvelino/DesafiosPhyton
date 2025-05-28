@@ -1,0 +1,10 @@
+n = soma = cont = 0  
+
+while True:  # Loop infinito até que o usuário digite 999
+    n = int(input('Digite um valor: [999 para parar] '))  
+    if n == 999:  # Condição para sair do loop
+        break  
+    soma += n  # Adiciona o valor digitado à soma total
+    cont += 1  # Conta quantos valores foram inseridos
+
+print(f'A soma dos {cont} valores é igual a {soma}!')  # Exibe o total dos valores somados
