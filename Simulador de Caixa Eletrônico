@@ -1,0 +1,28 @@
+print('=' * 30)
+print('{:^30}'.format('BANCO CEV'))
+print('=' * 30)
+
+valor = int(input('Qual o valor que você quer sacar? R$ '))  # Valor desejado para saque
+cédula = 50  # Define a maior cédula disponível
+total = valor
+cont = 0
+
+while True:
+    if total >= cédula:
+        total -= cédula  # Subtrai o valor da cédula do total a ser sacado
+        cont += 1  # Conta quantas cédulas desse valor serão usadas
+    else:
+        if cont > 0:
+            print(f'Total de {cont} cédulas de {cédula}')
+        if cédula == 50:
+            cédula = 20
+        elif cédula == 20:
+            cédula = 10
+        elif cédula == 10:
+            cédula = 1
+        cont = 0
+        if total == 0:
+            break  
+
+print('=' * 30)
+print('Volte sempre ao BANCO CEV. Tenha um ótimo dia!')
