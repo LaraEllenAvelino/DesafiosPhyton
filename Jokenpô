@@ -1,0 +1,40 @@
+from random import randint  # Importa randint, que gera números aleatórios
+from time import sleep  # Importa sleep, que pausa a execução por um tempo
+
+print('-*'*20)  # Cria uma linha de separação visual com o caractere '-*'
+print('JOKENPÔ!')  # Exibe o título do jogo
+print('-*'*20)  # Outra linha de separação
+
+print('''Escolha uma das opções:  
+ [1] PEDRA  
+ [2] PAPEL  
+ [3] TESOURA''')  # Exibe as opções para o jogador
+
+n = int(input('Qual a sua jogada? '))  # Recebe a escolha do usuário e converte para um número inteiro
+
+print('PROCESSANDO...')  
+sleep(4)  # Pausa a execução por 4 segundos para dar um efeito dramático
+
+itens = ('PEDRA', 'PAPEL', 'TESOURA')  # Cria uma tupla com os itens do jogo
+
+comp = randint(1,3)  # O computador escolhe aleatoriamente um número entre 1 e 3
+
+if n == 1 and comp == 2 or n == 2 and comp == 3 or n == 3 and comp == 1:  
+    # Se a jogada do jogador perder para a jogada do computador
+    print('Jogador jogou {}'.format(itens[n]))  
+    print('Computador jogou {}'.format(itens[comp]))  
+    print('NÃO FOI DESSA VEZ! :( ')  
+
+elif n == 2 and comp == 1 or n == 3 and comp == 2 or n == 1 and comp == 3:  
+    # Se a jogada do jogador ganhar do computador
+    print('Jogador jogou {}'.format(itens[n]))  
+    print('Computador jogou {}'.format(itens[comp]))  
+    print('PARABÉNS, VOCÊ VENCEU! :D ')  
+
+elif n == comp:  
+    # Se ambas as escolhas forem iguais, dá empate
+    print('HOUVE UM EMPATE! :| ')  
+
+else:  
+    # Se o jogador digitar um número inválido
+    print('VALOR INVÁLIDO!')
