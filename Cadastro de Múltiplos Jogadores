@@ -1,0 +1,44 @@
+jogadores = []  # Lista para armazenar múltiplos jogadores
+
+while True:
+    jogador = {}  # Dicionário para cada jogador
+    gols = []  # Lista de gols por partida
+    tot = 0  # Contador de gols
+
+    jogador['nome'] = str(input('Nome do Jogador: '))  # Solicita o nome
+    partidas = int(input(f'Quantas partidas {jogador["nome"]} jogou? '))  # Solicita quantas partidas jogou
+
+    for p in range(partidas):
+        gols_partida = int(input(f'Quantos gols na partida {p}? '))
+        gols.append(gols_partida)
+        tot += gols_partida
+
+    jogador['gols'] = gols  # Adiciona lista de gols ao dicionário
+    jogador['total'] = tot  # Adiciona total de gols ao dicionário
+
+    jogadores.append(jogador)  # Adiciona jogador à lista
+
+    r = str(input('Quer continuar? [N/S] ')).upper()[0]
+    if r == 'N':
+        break
+
+print('-=' * 30)
+print(f'cod nome            gols               total')
+print('-' * 50)
+
+for j, jogador in enumerate(jogadores):
+    print(f'{j:>4} {jogador["nome"]:<3}  {str(jogador["gols"]):>15}  {jogador["total"]:>15}')
+
+# Exibe dados detalhados sobre cada jogador
+while True:
+    dados = int(input('Mostrar dados de qual jogador? "999" para sair '))
+    if dados == 999:
+        print(' >> FINALIZADO.')
+        break
+    if dados not in range(len(jogadores)):
+        print('Jogador NÃO cadastrado.')
+    else:
+        jogador = jogadores[dados]
+        print(f'-- LEVANTAMENTO DO JOGADOR {jogador["nome"]}')
+        for partida, gols in enumerate(jogador["gols"]):
+            print(f'    No jogo {partida} fez {gols} gols.')
