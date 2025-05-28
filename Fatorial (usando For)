@@ -1,0 +1,8 @@
+resultado = 1  
+n = int(input('Digite um número: '))  
+
+for i in range(n, 0, -1):  # Loop de n até 1, incluindo 1
+    resultado *= i  # Multiplica o valor de resultado pelo número i
+
+print(resultado)  
+# Exibe o fatorial do número informado pelo usuário
