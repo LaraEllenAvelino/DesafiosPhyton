@@ -1,0 +1,23 @@
+jogador = {}  # Dicionário para armazenar os dados do jogador
+gol = []  # Lista para armazenar os gols
+tot = 0  # Contador de gols
+
+jogador['nome'] = str(input('Nome do Jogador: '))  # Solicita o nome do jogador
+partidas = int(input(f'Quantas partidas {jogador["nome"]} jogou? '))  # Solicita o número de partidas
+
+# Registra os gols de cada partida
+for p in range(partidas):
+    gols_partida = int(input(f'Quantos gols na partida {p}? '))
+    gol.append(gols_partida)
+    tot += gols_partida  # Acumula os gols totais
+
+jogador['gols'] = gol  # Adiciona os gols ao dicionário
+jogador['total'] = tot  # Adiciona o total de gols ao dicionário
+
+print('-=' * 30)
+print(f'O jogador {jogador["nome"]} jogou {partidas} partidas.')
+
+# Exibe os gols marcados em cada jogo
+for p in range(partidas):
+    print(f'    => Na partida {p}, fez {gol[p]} gols.')
+print(f'Total de gols marcados: {tot}.')
