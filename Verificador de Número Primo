@@ -1,0 +1,19 @@
+cont = 0  # Contador de quantas vezes o número foi divisível
+
+n = int(input('Digite um valor inteiro: '))  # Solicita um número inteiro
+
+for c in range(1, n + 1):  # Loop de 1 até o número informado pelo usuário
+    if (n % c == 0):  # Verifica se é divisível pelo contador atual
+        print('\033[1;32m', end='')  # Exibe em verde os números pelos quais foi divisível
+        cont += 1  
+    else:
+        print('\033[1;31m', end='')  # Exibe em vermelho os números que não são divisores
+
+    print('{} '.format(c), end='')  # Exibe os números no mesmo formato
+
+print('\n\033[mO número {} foi divisível {} vezes.'.format(n, cont))  # Exibe quantas vezes o número foi divisível
+
+if cont == 2:  # Se foi divisível apenas por 2 valores, é primo
+    print('E por isso ele é primo.')
+else:
+    print('E por isso ele não é primo.')
