@@ -1,0 +1,30 @@
+n1 = int(input('Digite o primeiro valor: '))
+n2 = int(input('Digite o segundo valor: '))
+opção = 0  # Inicializa a variável da escolha do usuário
+
+while opção != 5:  # O programa continua até que o usuário escolha sair
+    opção = int(input('\n [1] SOMA\n [2] MULTIPLICAR\n [3] MAIOR\n [4] NOVOS NÚMEROS\n [5] SAIR DO PROGRAMA\nR:'))
+
+    if opção == 1:  
+        # Soma os dois números digitados
+        print('SOMA: {} + {} = {}'.format(n1, n2, n1 + n2))
+
+    elif opção == 2:  
+        # Multiplica os dois números digitados
+        print('MULTIPLICAÇÃO: {} x {} = {}'.format(n1, n2, n1 * n2))
+
+    elif opção == 3:  
+        # Compara os valores e mostra o maior número
+        maior = max(n1, n2)
+        print('{} é maior.'.format(maior))
+
+    elif opção == 4:  
+        # Permite que o usuário insira novos números para calcular novamente
+        n1 = int(input('Digite um primeiro novo número: '))
+        n2 = int(input('Digite um segundo novo número: '))
+
+    else:
+        print('OPÇÃO INVÁLIDA!')  
+
+print('FIM!')
+# Quando o usuário escolhe a opção 5, o programa termina
