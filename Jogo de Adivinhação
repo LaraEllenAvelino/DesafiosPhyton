@@ -1,0 +1,15 @@
+from random import randint  # Importa a função randint, que gera números aleatórios
+from time import sleep  # Importa a função sleep para criar pausas na execução
+
+n = input('Adivinhe qual número de 0 a 5 acabei de pensar: ')  # Solicita ao usuário que adivinhe um número entre 0 e 5
+comp = randint(0,5)  # O computador escolhe um número aleatório entre 0 e 5
+
+print('PROCESSANDO...')  
+sleep(4)  # Faz uma pausa de 4 segundos para dar um efeito dramático antes de revelar o resultado
+
+if (n == comp):  # Compara a resposta do usuário com o número gerado pelo computador
+    print('PARABÉNS, o número que eu pensei foi realmente o {}.'.format(comp))  # Se for igual, exibe mensagem de vitória
+else:
+    print('Não foi dessa vez! O número escolhido foi o {}.'.format(comp))  # Se for diferente, exibe a resposta correta
+
+print('Obrigada por jogar!')  # Mensagem final para o jogador
