@@ -1,0 +1,20 @@
+print('='*25)  
+print('SEQUÊNCIA DE FIBONACCI')  
+print('='*25)  
+
+n = int(input('Digite até qual número aparecerá a sequência de Fibonacci: '))
+cont = 3  
+t1 = 0  # Primeiro termo da sequência
+t2 = 1  # Segundo termo da sequência
+
+print('{} -> {}'.format(t1, t2), end='')
+
+while cont <= n:  
+    # Loop que gera a sequência
+    t3 = t1 + t2  # Calcula o próximo número na sequência
+    t1 = t2  # Atualiza os valores para continuar a sequência
+    t2 = t3  
+    print(' -> {}'.format(t3), end='')  
+    cont += 1  
+
+print(' FIM')  
