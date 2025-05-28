@@ -1,0 +1,14 @@
+soma = 0  # Acumulador da soma dos números pares
+cont = 0  # Contador de quantos números pares foram digitados
+
+nome = ('primeiro', 'segundo', 'terceiro', 'quarto', 'quinto', 'sexto', 'sétimo')  # Lista com os nomes das posições
+
+print('Digite 7 números: ')
+
+for c in range(0, 7):  # Loop de 0 a 6 para coletar 7 números
+    n = int(input(' {} valor: '.format(nome[c])))  # Solicita a entrada numérica do usuário
+    if n % 2 == 0:  # Verifica se o número é par
+        soma += n  # Adiciona à soma total
+        cont += 1  # Incrementa o contador de pares
+
+print(' Há \033[1;41m{}\033[m números PARES e a soma deles é \033[1;41m{}\033[m'.format(cont, soma))  # Exibe o resultado formatado
