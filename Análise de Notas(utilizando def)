@@ -1,0 +1,22 @@
+def notas(*valores, sit=False):  
+    """Analisa notas e retorna um dicionário com as informações."""  
+    dicionário = {}  
+    total = len(valores)  
+    maior = max(valores)  
+    menor = min(valores)  
+    média = sum(valores) / total  
+
+    dicionário['total'] = total  
+    dicionário['maior'] = maior  
+    dicionário['menor'] = menor  
+    dicionário['média'] = média  
+
+    if sit:  
+        dicionário['situação'] = 'BOA' if média >= 7 else ('RAZOÁVEL' if média >= 5 else 'RUIM')  
+
+    return dicionário  
+
+# Programa Principal
+resp = notas(3.5, 10, 6.5, sit=True)  
+print(resp)  
+help(notas)  
