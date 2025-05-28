@@ -1,0 +1,13 @@
+# Solicita ao usuário que informe a velocidade do carro
+velocidade = float(input('Qual a velocidade do seu carro em km/h? '))
+
+# Calcula a multa caso a velocidade seja maior que 80 km/h
+multa = (velocidade - 80) * 7  # Cada km/h acima do limite adiciona R$7,00 de multa
+
+# Verifica se o usuário ultrapassou a velocidade permitida
+if velocidade > 80:
+    print('Você ultrapassou a velocidade aceita. Terá que pagar uma multa de R${:.2f}.'.format(multa))
+else:
+    print('Continue dirigindo com segurança!')  # Mensagem caso a velocidade esteja dentro do limite
+
+print('Tenha um ótimo dia!')  # Mensagem final ao usuário
