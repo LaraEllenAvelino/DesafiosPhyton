@@ -1,0 +1,4 @@
+for c in range(2, 51, 2):  # Loop que começa no 2 e incrementa de 2 em 2 até 50
+    print(c, end=' ')  # Exibe os números pares na mesma linha
+
+print('ACABOU')  # Mensagem final indicando o fim da execução
