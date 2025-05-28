@@ -1,0 +1,38 @@
+# Solicita ao usuário o preço do produto
+preço = float(input('Qual o preço do produto? R$'))
+
+# Exibe as opções disponíveis para pagamento
+print('''FORMAS DE PAGAMENTO:
+         [1] À VISTA
+         [2] À VISTA NO CARTÃO
+         [3] CARTÃO PARCELADO''')
+
+# Recebe a escolha do usuário
+pagamento = int(input('Qual a forma de pagamento? '))
+
+# Se o pagamento for parcelado (opção 3), solicita o número de parcelas
+if pagamento == 3:
+    parcelas = int(input('Quantas vezes no cartão? '))
+    
+    # Se o número de parcelas for maior que 3, adiciona 20% de juros
+    if parcelas > 3:
+        p4 = preço + (preço * 0.20)  # Calcula o novo valor com 20% de acréscimo
+        print('20% de juros. O valor sairá de R${:.2f} por R${:.2f}'.format(preço, p4))
+    
+    # Se as parcelas forem menores ou iguais a 2, mantém o valor original sem juros
+    if parcelas <= 2:
+        print('O valor sairá R${:.2f} SEM JUROS'.format(preço))
+
+# Se o pagamento for à vista, aplica 10% de desconto
+elif pagamento == 1:
+    p1 = preço - (preço * 0.10)  # Calcula o valor com 10% de desconto
+    print('10% de desconto. O valor de R${:.2f} sairá por R${:.2f}'.format(preço, p1))
+
+# Se o pagamento for à vista no cartão, aplica 5% de desconto
+elif pagamento == 2:
+    p2 = preço - (preço * 0.05)  # Calcula o valor com 5% de desconto
+    print('5% de desconto. O valor de R${:.2f} sairá por R${:.2f}'.format(preço, p2))
+
+# Se o usuário escolher uma opção inválida, exibe uma mensagem de erro
+else:
+    print('OPÇÃO INVÁLIDA de pagamento.')
