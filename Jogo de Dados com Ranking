@@ -1,0 +1,27 @@
+from random import randint  # Importa randint para gerar números aleatórios
+from time import sleep  # Importa sleep para criar pausas na execução
+from operator import itemgetter  # Importa itemgetter para ordenar os resultados
+
+# Gera os valores aleatórios para cada jogador
+jogo = {'jogador(1)': randint(1, 6),
+        'jogador(2)': randint(1, 6),
+        'jogador(3)': randint(1, 6),
+        'jogador(4)': randint(1, 6)}
+
+ranking = []  # Lista para armazenar os jogadores ordenados
+
+# Exibe os valores sorteados
+for k, v in jogo.items():
+    print(f'{k} tirou {v} no dado.')
+    sleep(1)
+
+print('-' * 25)
+print('Ranking dos jogadores: ')
+
+# Ordena os resultados do maior para o menor
+ranking = sorted(jogo.items(), key=itemgetter(1), reverse=True)
+
+# Exibe os jogadores em ordem de colocação
+for i, v in enumerate(ranking):
+    print(f'{i+1}° lugar: {v[0]} com {v[1]}.')
+    sleep(1)
