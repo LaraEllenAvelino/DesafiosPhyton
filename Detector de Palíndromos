@@ -1,0 +1,16 @@
+frase = str(input('Digite uma frase: ')).upper().strip()  # Solicita a frase e remove espaços extras
+
+palavras = frase.split()  # Separa as palavras digitadas
+juntar = ''.join(palavras)  # Junta as palavras em uma única string, sem espaços
+
+inverso = ''  # Variável que armazenará o inverso da frase
+
+for letra in range(len(juntar) -1, -1, -1):  # Percorre a string ao contrário
+    inverso += juntar[letra]  # Adiciona cada letra ao inverso
+
+print('O inverso de {} é {}'.format(juntar, inverso))  # Exibe o resultado
+
+if (juntar == inverso):  # Verifica se a frase invertida é igual à original
+    print('Temos um palíndromo!')
+else:
+    print('Não temos um palíndromo!')
