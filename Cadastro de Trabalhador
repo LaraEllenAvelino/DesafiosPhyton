@@ -1,0 +1,29 @@
+from datetime import date  # Importa a biblioteca para calcular o ano atual
+ano_atual = date.today().year  # Obtém o ano atual
+
+pessoa = {}  # Cria um dicionário para armazenar os dados da pessoa
+
+pessoa['nome'] = str(input('Nome: '))  # Solicita o nome
+pessoa['idade'] = int(input('Ano de Nascimento: '))  # Solicita o ano de nascimento
+pessoa['carteira'] = int(input('Carteira de trabalho (0 para não ter): '))  # Solicita a carteira de trabalho
+
+# Se a pessoa tiver carteira assinada, solicita mais informações
+if pessoa['carteira'] != 0:
+    pessoa['ano'] = int(input('Ano de contratação: '))
+    pessoa['salário'] = float(input('Salário: R$ '))
+
+    pessoa['idade'] = ano_atual - pessoa['idade']
+    contribuição = pessoa['idade'] + (pessoa['ano'] + 35 - ano_atual)  # Calcula o tempo até a aposentadoria
+
+    print('=-' * 25)
+    print(f'Nome: {pessoa["nome"]}')
+    print(f'Idade: {pessoa["idade"]}')
+    print(f'Contratação: {pessoa["ano"]}')
+    print(f'CTPS: {pessoa["carteira"]}')
+    print(f'Salário: R$ {pessoa["salário"]:.2f}')
+    print(f'Aposentadoria prevista para {contribuição} anos.')
+
+else:
+    print(f'Nome: {pessoa["nome"]}')
+    print(f'Idade: {ano_atual - pessoa["idade"]}')
+    print(f'Ainda não possui Carteira de Trabalho.')
