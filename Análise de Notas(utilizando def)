@@ -1,5 +1,11 @@
 def notas(*valores, sit=False):  
-    """Analisa notas e retorna um dicionário com as informações."""  
+    """
+    notas(*valores, sit=False
+    :param valores: uma ou mais notas dos alunos (aceita várias)
+    :param sit: valor opcional, indicando se deve ou não adicionar a situação.
+    :return: dicionário com várias informações sobre a situação da turma.
+    """
+
     dicionário = {}  
     total = len(valores)  
     maior = max(valores)  
