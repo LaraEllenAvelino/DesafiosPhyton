@@ -1,0 +1,15 @@
+def area(l, c):  
+    """Calcula a área de um terreno."""
+    r = l * c  # Multiplica a largura pelo comprimento para obter a área
+    print(f'A área de um terreno {l}x{c} é de {r}m².')  
+
+# Programa Principal
+print('CONTROLE DE TERRENOS')  
+print('-' * 20)  
+
+# Solicita ao usuário as dimensões do terreno
+l = float(input('LARGURA(m): '))  
+c = float(input('COMPRIMENTO(m): '))  
+
+# Chama a função para calcular a área
+area(l, c)  
