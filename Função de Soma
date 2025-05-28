@@ -1,0 +1,10 @@
+def soma(a, b):  
+    """Exibe a soma entre dois números."""  
+    print(f' A = {a} e B = {b}')  
+    s = a + b  
+    print(f' A soma A + B = {s}')  
+    print()  
+
+# Programa Principal
+soma(b=4, a=5)  
+soma(7, 2)  
