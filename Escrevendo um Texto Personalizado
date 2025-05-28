@@ -1,0 +1,11 @@
+def escreva(txt):  
+    """Exibe um texto personalizado."""
+    tam = len(txt)  # Obtém o tamanho da string para definir a quantidade de "~"
+    print('~' * tam)  
+    print(txt)  # Exibe o texto recebido
+    print('~' * tam)  
+
+# Programa Principal
+escreva('Gustavo Guanabara')  
+escreva('Curso de Python no YouTube')  
+escreva('CeV')  
