@@ -1,0 +1,14 @@
+def ficha(nome, gols):  
+    """Exibe a ficha do jogador."""  
+    if nome.strip() == '' or nome.isnumeric():  
+        nome = '<desconhecido>'  
+
+    if not gols.isnumeric():  
+        gols = 0  
+
+    print(f'O jogador {nome} fez {gols} gol(s) no campeonato.')  
+
+# Programa Principal
+nome = str(input('Nome do Jogador: '))  
+gols = str(input('Número de Gols: '))  
+ficha(nome, gols)  
