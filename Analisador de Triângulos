@@ -1,0 +1,14 @@
+print('-'*20)  # Exibe uma linha de separação visual
+print('ANALISADOR DE TRIÂNGULOS')  # Exibe o título do programa
+print('-'*20)  # Outra linha de separação
+
+# Solicita ao usuário que informe os três segmentos de reta
+r1 = float(input('Primeiro segmento: '))  # Recebe o primeiro valor
+r2 = float(input('Segundo segmento: '))  # Recebe o segundo valor
+r3 = float(input('Terceiro segmento: '))  # Recebe o terceiro valor
+
+# Verifica se os segmentos podem formar um triângulo
+if r1 < r2 + r3 and r2 < r1 + r3 and r3 < r1 + r2:
+    print("Os segmentos acima PODEM FORMAR um triângulo!")  # Mensagem caso a condição seja atendida
+else:
+    print("Os segmentos acima NÃO PODEM FORMAR um triângulo!")  # Mensagem caso a condição não seja atendida
