@@ -1,0 +1,12 @@
+def fatorial(n, show=False):  
+    """Calcula o fatorial de um número."""  
+    f = 1  
+    for i in range(n, 0, -1):  
+        if show:  
+            print(f'{i} x ' if i > 1 else f'1 = ', end='')  
+        f *= i  
+    return f  
+
+# Programa Principal
+print(fatorial(5, show=True))  
+help(fatorial)  # Exibe a documentação da função
