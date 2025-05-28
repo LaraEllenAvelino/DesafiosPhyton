@@ -1,0 +1,25 @@
+maior = cadastro = m = 0  
+
+while True:
+    print('-' * 20)
+    print('CADASTRE UMA PESSOA')
+    print('-' * 20)
+    
+    i = int(input('Idade: '))  # Solicita a idade do usuário
+    s = str(input('Sexo: [M/F] ')).strip().upper()[0]  # Solicita o sexo (M ou F)
+    print('-' * 20)
+    
+    c = str(input('Quer continuar? [S/N] ')).strip().upper()[0]  # Pergunta se quer continuar
+
+    if i >= 18:
+        maior += 1  # Conta quantas pessoas têm 18 anos ou mais
+    if s == 'M':
+        cadastro += 1  # Conta quantos homens foram cadastrados
+    if s == 'F' and i < 20:
+        m += 1  # Conta quantas mulheres têm menos de 20 anos
+    if c == 'N':
+        break  
+
+print(f'Há {maior} pessoas maiores de idade.')
+print(f'Há {cadastro} homens cadastrados.')
+print(f'Há {m} mulheres menores de 20 anos.')
