@@ -1,0 +1,12 @@
+while True:
+    print('-' * 25)  # Linha de separação
+    n = int(input('Quer ver qual tabuada? '))  # Recebe o número para gerar a tabuada
+    print('-' * 25)
+
+    if n < 0:  # Se o número for negativo, o programa encerra
+        break  
+
+    for i in range(1, 11):  # Loop para gerar a tabuada de 1 a 10
+        print(f'{n} x {i} = {n * i}')  # Exibe a multiplicação
+          
+print('PROGRAMA TABUADA ENCERRADA. Volte sempre!')  # Mensagem final
