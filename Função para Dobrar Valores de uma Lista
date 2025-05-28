@@ -1,0 +1,10 @@
+def dobra(list):  
+    """Multiplica por 2 cada elemento da lista."""  
+    pos = 0  
+    while pos < len(list):  
+        list[pos] *= 2  
+        pos += 1  
+
+valores = [7, 2, 5, 0, 4]  
+dobra(valores)  
+print(valores)  # Exibe a lista com os valores dobrados
