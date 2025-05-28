@@ -1,0 +1,20 @@
+from random import randint  # Importa randint para gerar números aleatórios
+from time import sleep  # Importa sleep para criar pausas
+
+comp = randint(0, 10)  # O computador escolhe aleatoriamente um número entre 0 e 10
+cont = 0  # Contador de tentativas
+
+n = int(input('Adivinhe qual o número entre 0 e 10: \nR:'))  
+print('\nPROCESSANDO...\n')  
+sleep(1)  # Pausa para criar suspense antes de revelar o resultado
+cont += 1  # Incrementa o número de tentativas
+
+while n != comp:  
+    # Enquanto o usuário não acertar o número secreto
+    cont += 1  # Conta as tentativas
+    n = int(input('Não foi dessa vez, tente novamente..: \nR:'))  
+    print('\nPROCESSANDO...\n')  
+    sleep(1)  # Pausa para suspense antes da próxima tentativa
+
+print('Muito bem, você acertou com {} palpites!'.format(cont))  
+# Mensagem final indicando quantas tentativas foram necessárias
