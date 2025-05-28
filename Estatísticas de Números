@@ -1,0 +1,25 @@
+n = 0  
+cont = 0  
+soma = 0  
+maior = 0  
+menor = 0  
+
+while True:
+    n = int(input('Digite um número (ou 0 para sair): '))  
+    if n == 0:
+        break  # O programa encerra se o usuário digitar 0
+    
+    cont += 1  # Conta quantos números foram digitados
+    soma += n  # Soma todos os números inseridos
+
+    if cont == 1:
+        maior = menor = n  # Define o primeiro número como maior e menor
+    else:
+        if n > maior:
+            maior = n
+        if n < menor:
+            menor = n
+
+print('MAIOR: {}\nMENOR: {}'.format(maior, menor))  
+print('Média: {:.2f}'.format(soma / cont))  
+print('FIM')  
