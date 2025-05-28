@@ -1,0 +1,7 @@
+from time import sleep  # Importa a função sleep para criar pausas na execução
+
+for c in range(1, 11):  # Loop que conta de 1 até 10
+    sleep(1)  # Aguarda 1 segundo antes de exibir o próximo número
+    print(c)  # Exibe a contagem
+
+print('\033[31mFOGOS!\033[m')  # Exibe a mensagem final em vermelho usando código ANSI
